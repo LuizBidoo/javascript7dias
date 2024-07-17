@@ -1,0 +1,83 @@
+Array = solução para juntar vários valores dentro de uma estrutura de dados
+const friends = ['Marcos', 'Ana', 'Julia']
+const num = [1,2,3,true,'Carlos']
+
+console.log(friends)
+console.log(num)
+
+métodos de adição: .push(nums) = adicionando no final da array
+         .unshift(nums) = adicionando no começo da array
+         .splice(posicao, quantos_vai_apagar, nums) = adicionando de uma posição especifica
+        // esses métodos se aplicam a strings também
+
+const num = [7,8,9]
+
+num.push(11,12,13)
+
+num.unshift(1,2,3)
+
+num.splice(3, 0, 4, 5, 6)
+
+console.log(num) // 1,2,3,4,5,6,7,8,9,11,12,13
+
+localização de itens de tipos primitivos: indexOf(itemProcurado) = retorna o index onde se encontra o item (-1 se não existir)
+                                          include(itemProcurado) = retorna true or false
+                      
+
+localização de itens de tipos referencia: 
+exemplo de situação: const movies = [
+    {id: 1, movieName: 'Dejavu'},
+    {id: 2, movieName: 'Back to the future'},
+    {id: 3, movieName: 'Matrix'}
+]
+
+console.log(movies.includes({id: 1, movieName: 'Dejavu'})) // vai retornar false, como resolver?
+
+
+usando .find(função_de_busca) // precisamos fazer uma função que busca e retorna para o método:
+
+const movies = [
+    {id: 1, movieName: 'Dejavu'},
+    {id: 2, movieName: 'Back to the future'},
+    {id: 3, movieName: 'Matrix'}
+]
+
+console.log(movies.find(function(movie){
+    return movie.id == 2
+})) // instancia um movie e retorna para o caso verdadeiro do predicado de retorno
+    // nesse caso: se existir um movie com id 2, retorne ele.
+
+se for uma array de referencia, usar o find, se for array primitiva pode usar includes
+
+console.log(movies.find(movie => movie.movieName === 'Matrix')) // tudo dali de cima, mas em arrow function
+
+métodos de remoção: .pop() = remove do fim do array e retorna o item removido
+                    .shift() = remove do inicio do array e retorna o item removido
+                    .splice() = sem passar o ultimo parametro e também retorna oq foi removido
+
+zerando uma array: se a array for uma variável, podemos simplesmente passar uma array vazia
+                   array.lenght = 0
+                   array.splice(0, array.length)
+
+concatenando arrays: array.concat(array2) // o array não é modificado, precisa-se guardar em uma nova variável esse array concatenado
+                     
+dividindo arrays: array.splice(de onde começo, o valor logo após o que você quer terminar) // ex: [1,2,3,4] -> array.slice(0,3) = [1,2,3]
+
+utilizando o join: .join(separador) -> transforma array em string e separa os itens com o separator 
+
+organização de arrays: .sort() -> ajeita em ordem crescente/alfabetica
+                       .reverse() -> inverte a ordem do array
+
+testando elementos em um array: .every() -> checa todos os elementos da array a partir de uma função
+exemplo:
+    const tempLondon = [18, 13, 8, 2]
+
+    const tempPositive = tempLondon.every(value => value >= 0) // retorna true
+
+    se tivesse -1 por exemplo, retornaria false
+
+filtrando e retornando por uma condição: .filter()
+exemplo: 
+    const tempLondon = [18, 13, 8, -1]
+
+    const tempPositive = tempLondon.filter(value => value >= 0) // retorna [18, 13, 8]

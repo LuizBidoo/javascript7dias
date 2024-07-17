@@ -1,0 +1,21 @@
+Entendendo o HTML: 
+<h2> = Está o título ali
+box1 = é a primeira caixa de valor
+box2 = é a segunda caixa de valor
+<button> = outcome() é chamado a partir do clique do botão
+
+Entendendo o CSS:
+body {
+    background: é a cor do fundo da aplicação
+}
+
+os wrappers server para dar forma aos objetos que estão dentro
+do HTML
+
+as informações visuais de cada componente de HTML
+
+index.html -> layout/objetos
+style.css -> cores/fontes (faz além disso)
+index.js -> inteligência da aplicação
+
+quando clico em calculate, preciso retornar o valor para a pagina web

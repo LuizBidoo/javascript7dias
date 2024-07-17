@@ -1,0 +1,15 @@
+h1 {
+    color: blueviolet;
+    font-size: 20;
+}
+
+h2 {
+    color: blue;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h3 {
+    color: red;
+    font-size: xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

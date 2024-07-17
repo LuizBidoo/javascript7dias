@@ -1,0 +1,107 @@
+OOP = Object Oriented Programming
+
+Pensando em um livro -> possui titulo, autor, paginas, preço; podemos ler esse livro, comprar, vender, ver as informações dele
+
+Propriedades: titulo, autor, paginas, preço
+
+Metodos: ler, comprar, vender, ver informações
+
+LIVRO É O OBJETO!
+
+ex de objeto livro:
+const book = {
+    bookTitle: 'Atomic Habits',
+    bookAuthor: 'James Clear',
+    bookPages: 306,
+    bookChapters: {
+        chap1: 'The Fundamentals',
+        chap2: '1st law'
+    }
+}
+
+podemos criar funções dentro de objetos (metodos)
+
+const book = {
+    bookTitle: 'Atomic Habits',
+    bookAuthor: 'James Clear',
+    bookPages: 306,
+    bookChapters: {
+        chap1: 'The Fundamentals',
+        chap2: '1st law'
+    },
+    printBook: function() {
+        console.log('Printing...')
+    }
+}
+
+FACTORY: Na necessidade de agrupar muitos objetos parecidos
+
+Criando uma factory
+
+function createBook(title, author, pages) {
+    const book = {
+        bookTitle: title,
+        bookAuthor: author,
+        bookPages: pages,
+        printBook: function() {
+            console.log('Printing...')
+        }
+    }
+    return book
+}
+
+const book1 = createBook('Atomic', 'James', 306)
+const book2 = createBook('Think', 'Napolean', 420)
+
+console.log(book1) // atomic
+console.log(book2) // think
+
+adicionando propriedades aos objetos saidos da factory
+
+Não existem só as factorys como criador de objetos
+podemos criar construtores também
+
+criando construtores:
+
+function Book(title, author, pages) {
+    this.bookTitle = title;
+    this.bookAuthor = author;
+    this.bookPages = pages
+}
+
+const book1 = new Book('Atomic', 'James', 306)
+
+JavaScript possui garbage collector!
+
+Objetos Built in: Objetos com métodos já preparados em JavaScript
+
+exemplo Math, Number, Object, String, etc.
+
+exemplo com String:
+let message = "Hey, my name is Luiz"
+
+console.log(message.length)
+console.log(message.startsWith('Hey'))
+console.log(message.endsWith('Luiz'))
+
+template literals: 
+
+let firstName = 'Joe'
+
+const email = 'Hi ' + firstName + ', \nThe meeting is confirmed! \nLuiz'
+
+const email2 = `Hi ${firstName}, 
+The meeting is confirmed! 
+Luiz`
+
+console.log(email)
+console.log(email2)
+
+console: 
+Hi Joe, 
+The meeting is confirmed! 
+Luiz
+
+Hi Joe, 
+The meeting is confirmed! 
+Luiz

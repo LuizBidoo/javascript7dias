@@ -1,0 +1,37 @@
+JavaScript é case sensitive e com tipagem dinâmica.
+Tem como tipos primitivos: Number, String, Boolean, null e undefined
+Tem como tipos referência: object, array e function
+
+object -> let johnson = { nomeAtributo1: "blablabla", nomeAtributo2: 3, nomeAtributo3: true }
+
+array -> let friends = [Item1, Item2, Item3] (não precisa ser tudo do mesmo tipo)
+podemos trocar o que tiver lá dentro e só pegar itens específicos
+usamos arrays para armazenar uma lista de itens
+
+functions -> grupo de instruções que a gente pode criar
+
+const percentage10 = function(price) {
+    return price - (price * 10/100)
+}
+
+function percentage10(price) {
+    return price - (price * 10/100)
+}
+
+dois jeitos de criarmos funções
+
+for in loop -> loop em objetos
+
+for (let i in objeto) {
+    console.log(i, objeto[i]) // chave valor 
+}
+
+friends = ["amigos"]
+for (let i in friends) {
+    console.log(friends[i]) // printa os amigos e não o index
+}
+
+isso é igual:
+for (let i of friends) {
+    console.log(i) // printa os amigos e não o index
+}

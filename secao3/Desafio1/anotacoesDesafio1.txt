@@ -1,0 +1,10 @@
+Passo 1 = Criar os arquivos html, css e JavaScript
+Passo 2 = Fazer os links entre eles (como?)
+    no html:
+    //<script src="index.js"></script>
+    //<link rel="stylesheet" href="style.css">
+Passo 3 = Criar textos estáticos no html usando as tags de texto
+Passo 4 = Reservar uma área para o texto dinâmico usando a tag span e um id que será manipulado no js
+    como manipulamos no js?
+    usando o metodo document.getElementByID(idCriadoNoHtml).innerHTML
+    innerHTML = propriedade que diz que estaremos inserindo no html naquele id apontado pelo parametro

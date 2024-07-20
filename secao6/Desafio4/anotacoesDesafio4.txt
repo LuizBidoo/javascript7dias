@@ -1,0 +1,8 @@
+Calculadora de gorjeta: 
+podemos colocar a chamada da função a partir do comando oninput
+onde fazemos isso? podemos fazer isso no rótulo da main, que contém todos os elementos, pois toda vez que mudarmos
+algo na calculadora, temos um novo resultado. ou poderíamos colocar a chamada da função em todos os elementos que mudarmos
+
+// function update() {
+//     console.log('Ok')
+// } verificador de link

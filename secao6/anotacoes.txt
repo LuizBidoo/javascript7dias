@@ -1,0 +1,27 @@
+// Function Declaration
+
+function movie() {
+	console.log('The Matrix')
+}
+
+movie()
+
+// Function Expression
+
+const car = function() {
+	console.log('Tesla')
+}
+
+car() // 'Tesla'
+ 
+const truck = car
+
+truck() // 'Tesla'
+
+HOISTING = Funções (declaradas) em JS são carregadas primeiro
+
+tentar chamar uma function expression antes de criá-la dará erro, coisa que não ocorre com as declarations
+
+argumentos em uma função são dinâmicos: podemos passar a mesma quantidade pedida ou mais (para mais teremos que navegar no array arguments)
+
+argumentos podem ser default => function carLoan(loan, rate = 2.5, years = 5) { return (loan * rate/100 * years) + loan } carLoan(2500) // 22500

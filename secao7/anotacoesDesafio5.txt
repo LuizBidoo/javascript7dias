@@ -1,0 +1,8 @@
+existem 2 formas de se comunicar por uma ação com html:
+pelo html dizendo no botão que pelo clique ele chamará uma função (onclick = "function()")
+ou uma função no js que escute o clique do botão e se ative (btn.addEventListener('click'))
+
+const element = document.querrySelector('seletor CSS') -> passa pra element o primeiro elemento encontrado pelo seletor CSS
+
+ex = const element = document.querrySelector('.exemplo') -> retorna o primeiro elemento com a classe exemplo
+podemos alterar várias coisas do elemento
